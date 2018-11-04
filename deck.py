@@ -38,6 +38,9 @@ for i in range(num_suits):
         suited_faces[x] = suited_faces[x] + Face_cards[x]
         total_deck.append(suited_faces[x])   
 
+if jokers:
+    for x in range(num_jokers):
+        total_deck.append('j')
 
 # # for testing
 # print(total_deck)
