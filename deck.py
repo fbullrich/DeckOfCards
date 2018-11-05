@@ -14,9 +14,15 @@ num_jokers = 2
 # S - spades, H - hearts
 # C - clubs,  D - diamonds
 Suits = ['S', 'H', 'C', 'D']
+suitTranslation = {
+    'S':'of Spades',
+    'H':'of Hearts',
+    'C':'of Clubs',
+    'D':'of Diamonds',
+}
 
 # 3 face cards - might replace 1 with ace but thats work
-Face_cards = ['King', 'Queen', 'Jack']
+Face_cards = ['Jack', 'Queen', 'King']
 
 total_deck = []    
 
