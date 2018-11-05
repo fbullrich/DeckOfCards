@@ -5,27 +5,21 @@ import random
 random.seed()
 
 
-#  Example values
-# Maindeck = [1, 2, 3, 4, 5]
+# Example values
+# maindeck = [1, 2, 3, 4, 5]
 # shuffle_steps = 5
 
 
-def shuffling(Maindeck, shuffle_steps):
-    # sets a number of steps and creates a new array to be returned
-    steps = 0
-    Shuffler = Maindeck
+def shuffling(maindeck, shuffle_steps):
 
-    while steps < shuffle_steps:
-        # I dont know if this is a good way to shuffle but whatever
-        firstR = random.randint(0, len(Maindeck) - 1)
-        secondR = random.randint(0, len(Maindeck) - 1)
+    for i in range(len(maindeck)):
+        j = random.randint(i, len(maindeck) -1)
         
-        Shuffler[firstR], Shuffler[secondR] = Shuffler[secondR], Shuffler[firstR]
+        maindeck[i], maindeck[j] = maindeck[j], maindeck[i]
 
-        steps +=1
+    return maindeck
 
-    return Shuffler
-
-# #testing
-# Shuffled_deck = shuffling(Maindeck, shuffle_steps)
+#testing
+# for x in range (2):
+#     Shuffled_deck = shuffling(maindeck, shuffle_steps)
 # print(Shuffled_deck)
